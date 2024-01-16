@@ -1,0 +1,49 @@
+﻿<Window x:Class="AppEscritorio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppEscritorio"
+        mc:Ignorable="d"
+        Title="Inicio" Height="450" Width="800"
+        ResizeMode="NoResize">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Barra de menú -->
+        <Menu Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="#066699">
+            <MenuItem Header="Persona" Foreground="White">
+                <MenuItem Header="Agregar" Background="#f8f8ec" Foreground="Black" Click="Navigation_Click" Tag="Agregar"/>
+                <MenuItem Header="Buscar" Background="#f8f8ec" Foreground="Black" Click="Navigation_Click" Tag="Buscar"/>
+                <MenuItem Header="Borrar" Background="#f8f8ec" Foreground="Black" Click="Navigation_Click" Tag="Borrar"/>
+            </MenuItem>
+
+            <MenuItem Header="Factura" Foreground="White">
+                <MenuItem Header="Agregar" Background="#f8f8ec" Foreground="Black" Click="Navigation_Click_Factura" Tag="Agregar"/>
+                <MenuItem Header="Buscar" Background="#f8f8ec" Foreground="Black" Click="Navigation_Click_Factura" Tag="Buscar"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- Contenido principal -->
+        <Border Grid.Row="1" Background="#f8f8ec">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="0" Margin="58,82,58,82" Source="/Resources/equipo.png"/>
+
+                <StackPanel Grid.Column="1">
+                    <Image Source="/Resources/cuenta.png" Height="416" Width="240"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+    </Grid>
+</Window>
